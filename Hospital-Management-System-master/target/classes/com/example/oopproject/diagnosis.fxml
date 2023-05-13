@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.DiagnosisController">
+   <children>
+      <Label fx:id="diagnosisInfo" layoutX="216.0" layoutY="14.0" text="Diagnosis Information" textFill="#901b1b">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="82.0" text="PatientName">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="121.0" text="Medicines">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="121.0" text="PatientID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="82.0" text="Diagnosis">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="112.0" layoutY="80.0" promptText="name" />
+      <TextField fx:id="ID" layoutX="104.0" layoutY="119.0" promptText="ID" />
+      <TextField fx:id="diagnosis" layoutX="354.0" layoutY="80.0" promptText="diagnosis" />
+      <TextField fx:id="medicines" layoutX="354.0" layoutY="119.0" promptText="medicines" />
+      <Button fx:id="home" layoutX="377.0" layoutY="284.0" mnemonicParsing="false" onAction="#goHome" text="Home">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="29.0" layoutY="169.0" onMouseClicked="#addInfo" prefHeight="200.0" prefWidth="317.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="dCol" prefWidth="75.0" text="Diagnosis" />
+            <TableColumn fx:id="medCol" prefWidth="75.0" text="Medicine" />
+        </columns>
+      </TableView>
+      <Button fx:id="add" layoutX="377.0" layoutY="175.0" mnemonicParsing="false" onAction="#addInfo" text="Add" />
+   </children>
+</AnchorPane>
